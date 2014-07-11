@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Make Your Quiz</title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link
+		rel="stylesheet"
+		href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+	>
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<style>
+		.lighter {
+			color: #ccc;
+		}
+
+		#tour-nav > a {
+			float: right;
+		}
+
+    .btn-next-info {
+      background-color: #c4e3f3;
+      color: rgb(58,135,173);
+      border-color: #c4e3f3;
+    }
+
+    .btn-next-info:hover {
+      background-color: rgb(58,135,173);
+			color: #c4e3f3;
+      border-color: rgb(58,135,173);
+    }
+
+		.panel-danger {
+			border-color: #772953;
+		}
+
+		.panel-danger > .panel-heading {
+			background-color: #772953;
+		}
+
+	</style>
+	<script>
+		$(function() {
+			$( "ol.droptrue" ).sortable({
+				connectWith: "ol"
+			});
+			$( "ol.dropfalse" ).sortable({
+				connectWith: "ol",
+			});
+			$( "#sortable1, #sortable2" ).disableSelection();
+		});
+	</script>
+
+	<script>
+		<!--from blackkbot in ##javascript to populate-->
+		$(function() {
+			var arrayofstring = ['test', 'test2', 'test3'];
+
+			var ol = document.createElement('ol');
+			document.body.appendChild(ol);
+
+			var arrayofelements = arrayofstring.map(function (e,i ,a) {
+    			var t = e + "";
+    			var item = document.createElement('li');
+
+    			ol.appendChild(item);
+        			item.innerHTML = t;
+    			item.array = a;
+    			item.index = i;
+    			item.removable = true;
+    			return item;
+			});
+			document.addEventListener('click',removefromlist,false);
+			function removefromlist(event){
+    			if (event.target.removable ===true){
+    				event.target.parentNode.removeChild(event.target);
+    				event.target.array.splice(1,event.index);
+    			}
+    	}
+		});
+	</script>
+</head>
+
+<body>
+<div class="container">
+	<div class="page-header">
+		<div class="btn-toolbar" role="toolbar" id="tour-nav">
+			<a href="give.html" class="btn btn-lg btn-info btn-next-info" role="button">
+				<strong>Next: Give</strong>
+			</a>
+			<h1><span class="lighter">curri</span>Q-Lum <span class="text-danger">Concept: Get</span></h1>
+		</div><!--.btn-toolbar-->
+	</div><!--.page-header-->
+
+	<h3 class="text-center">Filter <i class="fa fa-arrow-right"></i> Drag <i class="fa fa-arrow-right"></i> Drop <i class="fa fa-arrow-right"></i> Deliver</h3>
+	<div class="col-sm-6">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<div class="panel-title text-center">
+					<div class="btn-group">
+						<div class="btn-group" id="grade-filter">
+							<button
+									class="btn btn-primary dropdown-toggle"
+									data-toggle="dropdown"
+									type="button"
+							>
+								Grade <i class="fa fa-filter"></i>
+							</button>
+							<ul class="dropdown-menu text-left">
+								<li class="disabled"><a href="#">K</a></li>
+								<li class="disabled"><a href="#">1</a></li>
+								<li class="disabled"><a href="#">2</a></li>
+								<li class="disabled"><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li class="disabled"><a href="#">5</a></li>
+								<li class="disabled"><a href="#">6</a></li>
+								<li class="disabled"><a href="#">7</a></li>
+								<li class="disabled"><a href="#">8</a></li>
+								<li class="disabled"><a href="#">9</a></li>
+								<li class="disabled"><a href="#">10</a></li>
+								<li class="disabled"><a href="#">11</a></li>
+								<li class="disabled"><a href="#">12</a></li>
+							</ul><!--.dropdown-menu-->
+						</div><!--.btn-group #grade-filter-->
+
+						<div class="btn-group" id="subject-filter">
+							<button
+									class="btn btn-primary dropdown-toggle"
+									data-toggle="dropdown"
+									type="button"
+							>
+								Subject <i class="fa fa-filter"></i>
+							</button>
+							<ul class="dropdown-menu text-left">
+								<li><a href="#">Math</a></li>
+								<li class="disabled"><a href="#">ELA</a></li>
+							</ul><!--.dropdown-menu-->
+						</div><!--.btn-group #subject-filter-->
+
+						<div class="btn-group" id="ccs-filter">
+							<button
+									class="btn btn-primary dropdown-toggle"
+									data-toggle="dropdown"
+									type="button"
+							>
+								Common Core Standard <i class="fa fa-filter"></i>
+							</button>
+							<ul class="dropdown-menu text-left">
+								<li class="disabled">
+									<a href="#">4.OA - Operations &amp; Algebraic Thinking</a>
+								</li>
+									<li class="disabled">
+									<a href="#">4.NBT - Number &amp; Operations in Base Ten</a>
+								</li>
+								<li><a href="#">4.NF - Number &amp; Operations&mdash;Fractions</a></li>
+								<li class="disabled"><a href="#">4.G - Geometry</a></li>
+							</ul><!--.dropdown-menu-->
+						</div><!--.btn-group #ccs-filter-->
+
+						<div class="btn-group" id="needs-filter">
+							<button
+									class="btn btn-primary dropdown-toggle"
+									data-toggle="dropdown"
+									type="button"
+							>
+								Special Needs <i class="fa fa-filter"></i>
+							</button>
+							<ul class="dropdown-menu text-left">
+								<li><a href="#">Autism Spectrum</a></li>
+								<li><a href="#">Behaviorally Challenged</a></li>
+								<li><a href="#">Speech/Language Impaired</a></li>
+								<li><a href="#">Visually Impaired</a></li>
+							</ul><!--.dropdown-menu-->
+						</div><!--.btn-group #needs-filter-->
+					</div><!--.btn-group-->
+				</div>
+			</div>
+			<div class="panel-body">
+				<ol id="sortable1" class="droptrue">
+					<li class="well">
+						Find 32 ÷ 8 by finding the number that makes 32 when multiplied by 8.
+					</li>
+					<!--<li class="well">
+						Describe a context in which a total number of objects can be expressed as 5 × 7
+					</li>
+					<li class="well">
+						Describe a context in which a number of shares or a number of groups can be expressed as 56 ÷ 8
+					</li>
+					<li class="well">
+						<ul class="list-group">
+							<li class="list-group-item">
+								Partition a shape into 4 parts with equal area.
+							</li>
+							<li class="list-group-item">
+								Describe the area of each part as 1/4 of the area of the shape.
+							</li>
+						</ul>
+					</li>-->
+					<li class="well">
+						Use a visual fraction model to express 3 × (2/5) as 6 × (1/5), recognizing this product as 6/5. (In general, n × (a/b) = (n × a)/b.)
+					</li>
+					<li class="well">
+						Determine the unknown number that makes each equation true:
+						<ul class="list-group">
+							<li class="list-group-item">8 × ? = 48</li>
+							<li class="list-group-item">5 = ? ÷ 3</li>
+							<li class="list-group-item">6 × 6 = ?</li>
+						</ul>
+					</li>
+				</ol><!--/#sortable1 .droptrue-->
+			</div><!--.panel-body-->
+		</div><!--.panel panel-primary-->
+	</div><!--.col-sm-6-->
+
+	<div class="col-sm-6">
+		<div class="panel panel-danger">
+			<div class="panel-heading">
+				<div class="panel-title text-center">
+					<div class="btn-group">
+						<a
+								href="#"
+								class="btn btn-info"
+								role="button"
+								title="download my quiz"
+						>
+							<i class="fa fa-download"></i>
+						</a>
+
+						<a
+								href="#"
+								class="btn btn-info"
+								role="button"
+								title="email me my quiz"
+						>
+
+							<i class="fa fa-envelope"></i>
+						</a>
+
+						<a
+								href="#"
+								class="btn btn-info"
+								role="button"
+								title="print my quiz"
+						>
+							<i class="fa fa-print"></i>
+						</a>
+					</div><!--.btn-group-->
+				</div><!--.panel-title-->
+			</div><!--panel-heading-->
+
+			<div class="panel-body">
+				<ol id="sortable2" class="droptrue">
+					<li class="ui-state-highlight">
+						<em>Drop a question here.</em>
+					</li>
+				</ol><!--/#sortable2 .droptrue-->
+			</div><!--.panel-body-->
+		</div><!--.panel .panel-primary-->
+
+	</div><!--.col-sm-6-->
+</div><!--.container-->
+</body>
+</html>

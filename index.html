@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>curriQ-Lum Concept Tour</title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link
+		href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+		rel="stylesheet"
+	>
+
+  <script src="http://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+
+	<style>
+		.btn-toolbar {
+			text-align: left;
+		}
+
+		.btn-toolbar > a {
+			float: right;
+		}
+
+		.lighter {
+			color: #ccc;
+		}
+
+		.accordion-toggle:hover {
+			text-decoration: none;
+		}
+
+		#get-accordion:hover{
+			background-color: #e0bebe;
+		}
+
+		#give-accordion:hover {
+			background-color: #c4e3f3;
+		}
+
+		#grow-accordion:hover {
+			background-color: #c0e1b2;
+		}
+	</style>
+</head>
+
+<body>
+<div class="container">
+	<div class="page-header">
+		<div class="btn-toolbar">
+			<a href="/poc/" class="btn btn-info btn-lg" role="button">
+				<strong>Next: Get</strong>
+			</a>
+			<h1><span class="lighter">curri</span>Q-Lum <span class="text-primary">Concept Tour</span></h1>
+		</div><!--.btn-toolbar-->
+	</div><!--.page-header-->
+
+	<h3 class="text-primary text-center">
+		Teachers helping teachers through Common Core curricula.
+	</h3>
+	
+	<div class="col-md-6 col-md-offset-3">
+		<div class="panel-group" id="accordion">
+			<div class="panel panel-danger">
+				<div class="panel-heading" id="get-accordion">
+					<div class="panel-title text-center">
+						<a id="getToggle" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#getMore">
+						<h2>
+							<i class="fa fa-plus-circle"></i>
+							Get&hellip;
+						</h2>
+						</a>
+					</div><!--.panel-title-->
+				</div><!--.panel-heading-->
+				<div id="getMore" class="panel-collapse collapse">
+					<div class="panel-body">
+						<ul class="list-group">
+							<li class="list-group-item">Teacher-tested &amp; recommended Common Core questions.</li>
+  						<li class="list-group-item">Collaborative feedback of your Common Core materials.</li>
+							<li class="list-group-item">Customized &amp; personalized materials delivered via email, printer, or download.</li>
+						</ul><!--.list-group-->
+					</div><!--.panel-body-->
+				</div><!--/#getMore-->
+			</div><!--.panel .panel-info-->
+
+			<div class="panel panel-info">
+				<div class="panel-heading" id="give-accordion">
+					<div class="panel-title text-center">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#giveMore">
+						<h2>
+							<i class="fa fa-plus-circle"></i>
+							Give&hellip;
+						</h2>
+						</a>
+					</div><!--.panel-title-->
+				</div><!--.panel-heading-->
+				<div id="giveMore" class="panel-collapse collapse">
+					<div class="panel-body">
+						<ul class="list-group">
+							<li class="list-group-item">Yourself time.</li>
+							<li class="list-group-item">The teaching community the benefits of your experience.</li>
+							<li class="list-group-item">Your students valuable curricular guidance.</li>
+						</ul><!--.list-group-->
+					</div><!--.panel-body-->
+				</div><!--/#giveMore-->
+			</div><!--.panel .panel-success-->
+
+			<div class="panel panel-success">
+				<div class="panel-heading" id="grow-accordion">
+					<div class="panel-title text-center">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#growMore">
+						<h2>
+							<i class="fa fa-plus-circle"></i>
+							Grow&hellip;
+						</h2>
+						</a>
+					</div><!--.panel-title-->
+				</div><!--.panel-heading-->
+				<div id="growMore" class="panel-collapse collapse">
+					<div class="panel-body">
+						<ul class="list-group">
+							<li class="list-group-item">Your students' confidence, knowledge, and skills.</li>
+							<li class="list-group-item">Your repertoire of teacher tricks.</li>
+							<li class="list-group-item">Teacher collaboration.</li>
+						</ul><!--.list-group-->
+					</div><!--.panel-body-->
+				</div><!--/#growMore-->
+			</div><!--.panel .panel-danger-->
+		</div><!--.panel-group-->
+	</div><!--.col-sm-6 .col-sm-offset-3-->
+</div><!--.container-->
+
+<!--
+	<script>
+		$(function() {
+				$('#getMore').collapse('show');
+		});
+	</script>
+-->
+
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+<title>curriQ-Lum Survey</title>
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<style>
+	.lighter {
+		color: #ccc;
+	}
+
+	#tour-nav > a {
+		float: right;
+	}
+
+	#hidden_iframe {
+		display: none;
+	}
+
+	.amount {
+		width: auto;
+	}
+
+	#entry_946380882 {
+		width: auto;
+	}
+
+	.form-actions {
+		margin: 0;
+		background-color: transparent;
+		text-align: center;
+		}
+
+	.btn-success {
+		background-color: #468847;
+	}
+
+	.btn-success:hover {
+		background-color: #3e703e;
+	}
+</style>
+</head>
+
+<body>
+<div class="container">
+	<div class="page-header">
+		<div class="btn-toolbar" role="toolbar" id="tour-nav">
+			<a href="thanks.html" class="btn btn-lg btn-primary" role="button">
+				<strong>Next: Facts</strong>
+			</a>
+			<h1>
+				<span class="lighter">curri</span>Q-Lum <span class="text-success">Feedback Survey</span>
+			</h1>
+		</div><!--.btn-toolbar-->
+	</div><!--.page-header-->
+
+	<script type="text/javascript">var submitted=false;</script>
+
+	<iframe
+		name="hidden_iframe"
+		id="hidden_iframe"
+		onload="if(submitted) {window.location='/survey/thanks.html';}"
+	></iframe>
+
+	<form
+		action="https://docs.google.com/forms/d/1nlYMY6w0YjStbmauHHwhk0s_VKCKNAwvkGfEPV_IHhI/formResponse"
+		method="post"
+		id="ss-form"
+		class="form-horizontal"
+		target="hidden_iframe"
+		onsubmit="submitted=true;"
+	>
+		<div class="col-lg-10 col-lg-offset-1">
+			<div class="row">
+				<h3 class="text-center text-success">All questions are optional.</h3>
+			</div><!--.row-->
+
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<div class="panel-title text-center">
+						Give
+					</div><!--.panel-title-->
+				</div><!--.panel-heading-->
+
+				<div class="panel-body">
+					<div class="col-lg-5">
+						<div class="well well-sm">
+							<div class="col-lg-12">
+								<div class="form-group">
+									<label for="entry_258161058">
+										I am a
+									</label>
+
+									<div class="btn-group-vertical" data-toggle="buttons">
+										<label class="btn btn-default">
+											<input
+													type="radio"
+													name="entry.943298487"
+													value="Teacher"
+													id="group_943298487_1"
+											></input>
+												Teacher
+										</label>
+										<label class="btn btn-default">
+											<input
+													type="radio"
+													name="entry.943298487"
+													value="Parent"
+													id="group_943298487_2"
+											></input>
+												Parent
+										</label>
+										<label class="btn btn-default">
+											<input
+													type="radio"
+													name="entry.943298487"
+													value="School Administrator"
+													id="group_943298487_3"
+											></input>
+												School Administrator
+										</label>
+										<label class="btn btn-default">
+											<input
+													type="radio"
+													name="entry.943298487"
+													value="__other_option__"
+													id="group_943298487_4"
+											></input>
+											<span class="sr-only">Other: please specify</span>
+											<input
+													type="text"
+													name="entry.943298487.other_option_response"
+													value=""
+													class="form-control text-center"
+													id="entry_943298487_other_option_response"
+													placeholder="(please specify)"
+											></input>
+										</label>
+									</div><!--.btn-group-vertical-->
+								</div><!--.form-group-->
+							</div><!--.col-lg-12-->
+						</div><!--.well well-sm-->
+					</div><!--.col-lg-5-->
+
+					<div class="col-lg-7">
+						<div class="well well-sm">
+							<div class="col-lg-12">
+								<div class="form-group form-inline text-center">
+									<label for="entry_1068568193">
+										I spend
+									</label>
+										<input
+												type="number"
+												class="amount form-control"
+												name="entry.1068568193"
+												id="entry_1068568193"
+												step="1"
+												min="0"
+												max="20"
+										></input>
+									<strong>hours/week creating tests &amp; quizzes.</strong>
+								</div><!--.form-group .form-inline-->
+							</div><!--.col-lg-12-->
+						</div><!--.well well-sm-->
+					</div><!--.col-lg-7-->
+				</div><!--.panel-body-->
+			</div><!--.panel .panel-info-->
+
+			<div class="panel panel-danger">
+				<div class="panel-heading">
+					<div class="panel-title text-center">
+						Get
+					</div><!--.panel-title-->
+				</div><!--.panel-heading-->
+				
+				<div class="panel-body">
+					<!--
+					This question is likely unnecessary
+					<div class="well well-sm">
+						<div class="col-lg-12">
+							<div class="form-group form-inline text-center">
+								<label for="entry_94654303">
+									Collaborative quiz creation would be worth $
+								</label>
+								<input
+										type="number"
+										class="amount form-control"
+										name="entry.94654303"
+										value=""
+										id="entry_94654303"
+										step="any"
+										min="0.0"
+										title="Monthly cost I would pay"
+								></input>
+								<strong>
+									per month.
+								</strong>
+							</div>
+						</div>
+					</div>
+					-->
+
+					<div class="well well-sm">
+						<div class="col-lg-12">
+							<div class="form-group form-inline">
+								<textarea
+										name="entry.1237302258"
+										rows="3"
+										class="form-control"
+										id="entry_1237302258"
+										placeholder="Q-Lum would be even more useful to me if..."
+								></textarea>
+							</div><!--.form-group .form-inline-->
+						</div><!--.col-lg-12"-->
+					</div><!--.well well-sm-->
+				</div><!--.panel-body-->
+			</div><!--.panel .panel-danger-->
+
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<div class="panel-title text-center">
+						Grow
+					</div><!--.panel-title-->
+				</div><!--.panel-heading-->
+				
+				<div class="panel-body">
+					<div class="col-lg-7">
+						<div class="well well-sm">
+							<div class="col-lg-12">
+								<div class="form-group form-inline text-center">
+									<select
+											name="entry.946380882"
+											id="entry_946380882"
+											class="form-control"
+									>
+										<option value="" disabled selected>Would you?</option>
+										<option value="Yes">I would</option>
+										<option value="Maybe">I might</option>
+										<option value="No">I would not</option>
+									</select>
+									<strong>tell friends &amp; colleagues about Q-Lum.</strong>
+								</div><!--.form-group .form-inline-->
+							</div><!--.col-lg-12-->
+						</div><!--.well .well-sm-->
+					</div><!--.col-lg-7-->
+
+					<div class="col-lg-5">
+						<div class="well well-sm">
+							<div class="col-lg-12">
+								<div class="form-group form-inline">
+									<input
+											type="email"
+											name="entry.1930429085"
+											id="entry_1930429085"
+											title="Must be a valid email address"
+											class="form-control"
+											placeholder="Email me when Q-Lum is ready for me."
+									></input>
+									<div class="error-message sr-only">
+										Must be a valid email address
+									</div>
+								</div><!--.form-group .form-inline-->
+							</div><!--.col-lg-12-->
+						</div><!--.well .well-sm-->
+					</div><!--.col-lg-5-->
+
+					<div class="col-lg-2 col-lg-offset-10">
+						<div class="form-actions">
+							<button class="btn btn-success" type="submit">
+								Submit Survey
+							</button>
+						</div><!--.form-actions-->
+					</div><!--.col-lg-12 .col-lg-offset-5-->
+				</div><!--.panel-body-->
+			</div><!--.panel .panel-success-->
+		</div><!--.col-lg-10-->
+
+	<input type="hidden" name="draftResponse" value="[]"></input>
+	<input type="hidden" name="pageHistory" value="0"></input>
+	<input type="hidden" name="fbzx" value="4534532581934208475"></input>
+</form>
+</div><!--.container-->
+</body>
+</html>
