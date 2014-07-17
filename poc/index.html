@@ -52,35 +52,6 @@
 			$( "#sortable1, #sortable2" ).disableSelection();
 		});
 	</script>
-
-	<script>
-		<!--from blackkbot in ##javascript to populate-->
-		$(function() {
-			var arrayofstring = ['test', 'test2', 'test3'];
-
-			var ol = document.createElement('ol');
-			document.body.appendChild(ol);
-
-			var arrayofelements = arrayofstring.map(function (e,i ,a) {
-    			var t = e + "";
-    			var item = document.createElement('li');
-
-    			ol.appendChild(item);
-        			item.innerHTML = t;
-    			item.array = a;
-    			item.index = i;
-    			item.removable = true;
-    			return item;
-			});
-			document.addEventListener('click',removefromlist,false);
-			function removefromlist(event){
-    			if (event.target.removable ===true){
-    				event.target.parentNode.removeChild(event.target);
-    				event.target.array.splice(1,event.index);
-    			}
-    	}
-		});
-	</script>
 </head>
 
 <body>
@@ -253,7 +224,9 @@
 			<div class="panel-body">
 				<ol id="sortable2" class="droptrue">
 					<li class="ui-state-highlight">
-						<em>Drop a question here.</em>
+					<strong>Drop a question here.</strong>
+					<em>Note: the filters and buttons on this page are illustrative, not functional</em>
+
 					</li>
 				</ol><!--/#sortable2 .droptrue-->
 			</div><!--.panel-body-->
